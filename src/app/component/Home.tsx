@@ -22,7 +22,7 @@ const Home = () => {
               src="/images/person.png"
               alt=""
               className="
-    sm:h-24 sm:w-24 h-25 w-25 rounded-full cursor-pointer
+    sm:h-24 sm:w-24 h-30 w-30  rounded-full cursor-pointer
     transition-all duration-500 ease-out
     hover:scale-110
     hover:rotate-6
