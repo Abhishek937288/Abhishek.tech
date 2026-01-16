@@ -163,7 +163,7 @@ const projects = [
     title: "Prolink",
     description:
       "LinkedIn Clone – A professional networking platform built with the MERN stack, allowing users to create profiles, connect with others, post updates, and engage with a social feed, replicating core LinkedIn features.",
-    image: "/project/linkedin.png",
+    image: "/project/linkedIn.png",
     github:
       "https://github.com/Abhishek937288/Linkedin-clone",
     live: "https://linkedin-clone-3-acj1.onrender.com",

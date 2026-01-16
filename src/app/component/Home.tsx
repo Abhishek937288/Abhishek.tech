@@ -5,8 +5,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const {  theme } = useTheme();
-   const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -19,10 +19,10 @@ const Home = () => {
         <div className="flex max-sm:flex-col max-sm:gap-3 items-center justify-between px-2">
           <div className="flex gap-6 max-sm:flex-col items-center">
             <img
-  src="/images/person.png"
-  alt=""
-  className="
-    sm:h-17 sm:w-17 h-20 w-20 rounded-full cursor-pointer
+              src="/images/person.png"
+              alt=""
+              className="
+    sm:h-24 sm:w-24 h-25 w-25 rounded-full cursor-pointer
     transition-all duration-500 ease-out
     hover:scale-110
     hover:rotate-6
@@ -31,7 +31,7 @@ const Home = () => {
     max-sm:shadow-[0_0_30px_rgba(99,102,241,0.6)]
     max-sm:-translate-y-1
   "
-/>
+            />
 
             <div className="text-center">
               <h4
@@ -66,10 +66,12 @@ bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(139,92,246,0.6)]"
             understand how things actually work.
           </p>
         </div>
-        <div className="pt-5"><GitHubCalendar
-  username="Abhishek937288"
-   colorScheme={theme === "dark" ? "dark" : "light"}
-/></div>
+        <div className="pt-5">
+          <GitHubCalendar
+            username="Abhishek937288"
+            colorScheme={theme === "dark" ? "dark" : "light"}
+          />
+        </div>
       </section>
     </div>
   );
