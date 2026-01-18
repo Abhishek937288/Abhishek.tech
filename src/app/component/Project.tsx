@@ -1,5 +1,6 @@
 import { ProjectType, Technology } from "@/types/react-github-calendar";
 import { ArrowUpRight, Github } from "lucide-react";
+import { TechIcons } from "./icons/TechIcons";
 
 const projects = [
   {
@@ -14,148 +15,141 @@ const projects = [
     technologies: [
       {
         name: "React",
-        icon: "https://cdn.simpleicons.org/react",
+        icon: TechIcons.React,
         url: "https://react.dev",
         iconKey: "React",
       },
       {
         name: "Node.js",
-        icon: "https://cdn.simpleicons.org/node.js",
+        icon: TechIcons.NodeJS,
         url: "https://nodejs.org",
         iconKey: "NodeJs",
       },
       {
         name: "Express.js",
-        icon: "https://cdn.simpleicons.org/express",
+        icon: TechIcons.Express,
         url: "https://expressjs.com",
         iconKey: "Express",
       },
       {
         name: "MongoDB",
-        icon: "https://cdn.simpleicons.org/mongodb",
+        icon: TechIcons.MongoDB,
         url: "https://mongodb.com",
         iconKey: "MongoDB",
       },
       {
         name: "Mongoose",
-        icon: "https://cdn.simpleicons.org/mongoose",
+        icon: TechIcons.Mongoose,
         url: "https://mongoosejs.com",
         iconKey: "Mongoose",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://cdn.simpleicons.org/tailwindcss",
+        icon: TechIcons.Tailwind,
         url: "https://tailwindcss.com",
         iconKey: "Tailwind",
       },
       {
         name: "TanStack Query",
-        icon: "https://cdn.simpleicons.org/reactquery",
+        icon: TechIcons.ReactQuery,
         url: "https://tanstack.com/query",
         iconKey: "TanStackQuery",
       },
       {
         name: "Postman",
-        icon: "https://cdn.simpleicons.org/postman",
+        icon: TechIcons.PostMan,
         url: "https://www.postman.com",
         iconKey: "Postman",
       },
       {
         name: "Git",
-        icon: "https://cdn.simpleicons.org/git",
+        icon: TechIcons.Git,
         url: "https://git-scm.com",
         iconKey: "Git",
       },
       {
         name: "GitHub",
-        icon: "https://cdn.simpleicons.org/github",
+        icon: TechIcons.Github,
         url: "https://github.com",
         iconKey: "GitHub",
       },
-       {
-    name: "WebSockets",
-    icon: "https://cdn.simpleicons.org/socketdotio",
-    url: "https://socket.io",
-    iconKey: "WebSockets",
-  }
+      {
+        name: "WebSockets",
+        icon: TechIcons.SokcetIO,
+        url: "https://socket.io",
+        iconKey: "WebSockets",
+      },
     ],
   },
-   {
+  {
     id: 2,
     title: "Stremify",
     description:
       "Stremify – A social learning platform built with the MERN stack that enables users to connect with friends, chat, and make video calls. It allows people to learn new languages together in an interactive and engaging way, share experiences, and collaborate, making language learning fun, social, and effective.",
     image: "/project/stremify.png",
-    github:
-      "https://github.com/Abhishek937288/Streamifyweb",
+    github: "https://github.com/Abhishek937288/Streamifyweb",
     live: "https://streamifyweb-2.onrender.com",
     technologies: [
       {
         name: "React",
-        icon: "https://cdn.simpleicons.org/react",
+        icon: TechIcons.React,
         url: "https://react.dev",
         iconKey: "React",
       },
       {
         name: "Node.js",
-        icon: "https://cdn.simpleicons.org/node.js",
+        icon: TechIcons.NodeJS,
         url: "https://nodejs.org",
         iconKey: "NodeJs",
       },
       {
         name: "Express.js",
-        icon: "https://cdn.simpleicons.org/express",
+        icon: TechIcons.Express,
         url: "https://expressjs.com",
         iconKey: "Express",
       },
       {
         name: "MongoDB",
-        icon: "https://cdn.simpleicons.org/mongodb",
+        icon: TechIcons.MongoDB,
         url: "https://mongodb.com",
         iconKey: "MongoDB",
       },
       {
         name: "Mongoose",
-        icon: "https://cdn.simpleicons.org/mongoose",
+        icon: TechIcons.Mongoose,
         url: "https://mongoosejs.com",
         iconKey: "Mongoose",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://cdn.simpleicons.org/tailwindcss",
+        icon: TechIcons.Mongoose,
         url: "https://tailwindcss.com",
         iconKey: "Tailwind",
       },
       {
         name: "TanStack Query",
-        icon: "https://cdn.simpleicons.org/reactquery",
+        icon: TechIcons.ReactQuery,
         url: "https://tanstack.com/query",
         iconKey: "TanStackQuery",
       },
       {
         name: "Postman",
-        icon: "https://cdn.simpleicons.org/postman",
+        icon: TechIcons.PostMan,
         url: "https://www.postman.com",
         iconKey: "Postman",
       },
       {
         name: "Git",
-        icon: "https://cdn.simpleicons.org/git",
+        icon: TechIcons.Git,
         url: "https://git-scm.com",
         iconKey: "Git",
       },
       {
         name: "GitHub",
-        icon: "https://cdn.simpleicons.org/github",
+        icon: TechIcons.Github,
         url: "https://github.com",
         iconKey: "GitHub",
       },
-      {
-        name: "stremifyweb",
-        icon: "https://cdn.simpleicons.org/socket",
-        url: "https://github.com",
-        iconKey: "https://www.streamify.io/en/",
-      }
     ],
   },
   {
@@ -164,86 +158,83 @@ const projects = [
     description:
       "LinkedIn Clone – A professional networking platform built with the MERN stack, allowing users to create profiles, connect with others, post updates, and engage with a social feed, replicating core LinkedIn features.",
     image: "/project/linkedIn.png",
-    github:
-      "https://github.com/Abhishek937288/Linkedin-clone",
+    github: "https://github.com/Abhishek937288/Linkedin-clone",
     live: "https://linkedin-clone-3-acj1.onrender.com",
- technologies: [
-  {
-    name: "React",
-    icon: "https://cdn.simpleicons.org/react",
-    url: "https://react.dev",
-    iconKey: "React",
+    technologies: [
+      {
+        name: "React",
+        icon: TechIcons.React,
+        url: "https://react.dev",
+        iconKey: "React",
+      },
+      {
+        name: "TypeScript",
+        icon: TechIcons.TypeScript,
+        url: "https://www.typescriptlang.org",
+        iconKey: "TypeScript",
+      },
+      {
+        name: "Node.js",
+        icon: TechIcons.NodeJS,
+        url: "https://nodejs.org",
+        iconKey: "NodeJs",
+      },
+      {
+        name: "Express.js",
+        icon: TechIcons.Express,
+        url: "https://expressjs.com",
+        iconKey: "Express",
+      },
+      {
+        name: "PostgreSQL",
+        icon: TechIcons.PostgreSQL,
+        url: "https://www.postgresql.org",
+        iconKey: "PostgreSQL",
+      },
+      {
+        name: "Prisma ORM",
+        icon: TechIcons.Prisma,
+        url: "https://www.prisma.io",
+        iconKey: "Prisma",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TechIcons.Tailwind,
+        url: "https://tailwindcss.com",
+        iconKey: "Tailwind",
+      },
+      {
+        name: "BetterAuth",
+        icon: TechIcons.BetterAuth,
+        url: "https://better-auth.vercel.app",
+        iconKey: "BetterAuth",
+      },
+      {
+        name: "WebSockets",
+        icon: TechIcons.SokcetIO,
+        url: "https://socket.io",
+        iconKey: "WebSockets",
+      },
+      {
+        name: "Postman",
+        icon: TechIcons.PostMan,
+        url: "https://www.postman.com",
+        iconKey: "Postman",
+      },
+      {
+        name: "Git",
+        icon: TechIcons.Git,
+        url: "https://git-scm.com",
+        iconKey: "Git",
+      },
+      {
+        name: "GitHub",
+        icon: TechIcons.Github,
+        url: "https://github.com",
+        iconKey: "GitHub",
+      },
+    ],
   },
-  {
-    name: "TypeScript",
-    icon: "https://cdn.simpleicons.org/typescript",
-    url: "https://www.typescriptlang.org",
-    iconKey: "TypeScript",
-  },
-  {
-    name: "Node.js",
-    icon: "https://cdn.simpleicons.org/node.js",
-    url: "https://nodejs.org",
-    iconKey: "NodeJs",
-  },
-  {
-    name: "Express.js",
-    icon: "https://cdn.simpleicons.org/express",
-    url: "https://expressjs.com",
-    iconKey: "Express",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "https://cdn.simpleicons.org/postgresql",
-    url: "https://www.postgresql.org",
-    iconKey: "PostgreSQL",
-  },
-  {
-    name: "Prisma ORM",
-    icon: "https://cdn.simpleicons.org/prisma",
-    url: "https://www.prisma.io",
-    iconKey: "Prisma",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "https://cdn.simpleicons.org/tailwindcss",
-    url: "https://tailwindcss.com",
-    iconKey: "Tailwind",
-  },
-  {
-    name: "BetterAuth",
-    icon: "https://cdn.simpleicons.org/auth0",
-    url: "https://better-auth.vercel.app",
-    iconKey: "BetterAuth",
-  },
-  {
-    name: "WebSockets",
-    icon: "https://cdn.simpleicons.org/socketdotio",
-    url: "https://socket.io",
-    iconKey: "WebSockets",
-  },
-  {
-    name: "Postman",
-    icon: "https://cdn.simpleicons.org/postman",
-    url: "https://www.postman.com",
-    iconKey: "Postman",
-  },
-  {
-    name: "Git",
-    icon: "https://cdn.simpleicons.org/git",
-    url: "https://git-scm.com",
-    iconKey: "Git",
-  },
-  {
-    name: "GitHub",
-    icon: "https://cdn.simpleicons.org/github",
-    url: "https://github.com",
-    iconKey: "GitHub",
-  }
-],
-
-
-  }
 ];
 
 const Project = () => {
@@ -253,7 +244,7 @@ const Project = () => {
         {projects.map((project: ProjectType) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row gap-6 items-start border border-border/50 rounded-xl p-3 sm:p-6 dark:bg-slate-800 bg-[#f9f4f0]  dark:text-white"
+            className="flex flex-col md:flex-row gap-6 items-start dark:border border-muted rounded-2xl p-3 sm:p-6  shadow-xl   dark:text-white"
           >
             <div className="w-full md:w-[45%] rounded-lg overflow-hidden relative group">
               <img
@@ -308,12 +299,14 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 group w-full"
                   >
-                    <img
-                      src={tech.icon}
-                      alt={tech.name}
-                      className="h-7 w-7 cursor-pointer transition-transform duration-300 group-hover:scale-125"
-                    />
-                    <p className="text-xs font-semibold opacity-80 text-center">
+                    {(() => {
+                      const Icon = tech.icon;
+                      return (
+                        <Icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
+                      );
+                    })()}
+
+                    <p className="text-xs font-semibold opacity-0  group-hover:opacity-100 text-center">
                       {tech.name}
                     </p>
                   </a>

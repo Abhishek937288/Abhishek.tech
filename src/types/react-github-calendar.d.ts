@@ -6,7 +6,7 @@ type Technology = {
   name: string;
   url: string;
   iconKey: keyof typeof TechIcons;
-  icon: string;
+  icon: ComponentType<{ className?: string }>;
 };
 
 type ProjectType = {

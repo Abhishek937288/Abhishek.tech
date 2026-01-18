@@ -19,7 +19,7 @@ const Home = () => {
         <div className="flex max-sm:flex-col max-sm:gap-3 items-center justify-between px-2">
           <div className="flex gap-6 max-sm:flex-col items-center">
             <img
-              src="/images/person.png"
+              src="/images/me.jpg"
               alt=""
               className="
     sm:h-24 sm:w-24 h-30 w-30  rounded-full cursor-pointer
@@ -34,16 +34,15 @@ const Home = () => {
             />
 
             <div className="text-center">
-              <h4
-                className="font-space text-lg sm:text-xl font-extrabold tracking-tight 
-bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 
-bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(139,92,246,0.6)]"
+              <h1
+                className="font-space text-xl sm:text-3xl font-extrabold tracking-tight
+text-slate-900 dark:text-white"
               >
                 Abhishek Mankumbare
-              </h4>
+              </h1>
 
               <p className="font-space sm:text-lg text-sm opacity-80  tracking-[-0.02em]">
-                Self-Taughet Developer
+                Aspiring MERN Stack Developer
               </p>
             </div>
           </div>
@@ -59,11 +58,12 @@ bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(139,92,246,0.6)]"
           </a>
         </div>
         <div className="pt-10">
-          <p className="text-center font-space sm:text-lg opacity-80  tracking-[-0.02em]">
-            I’m a self-taught developer who enjoys building things and learning
-            by doing. I spend most of my time improving my skills, experimenting
-            with new technologies, and working on projects that help me
-            understand how things actually work.
+          <p className="text-center font-space  opacity-80  tracking-[-0.02em]">
+            I’m a self-taught MERN stack developer based in India with over a
+            year of hands-on experience building real-world web applications. I
+            enjoy creating clean UIs and scalable backend logic, and I’m
+            currently looking for frontend or MERN stack developer
+            opportunities.
           </p>
         </div>
         <div className="pt-5">

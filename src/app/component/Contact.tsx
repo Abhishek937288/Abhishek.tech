@@ -50,84 +50,22 @@ const contactItems = [
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  if (!form.current) return;
-
-  setLoading(true);
-
-  emailjs
-    .sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-      form.current,
-      {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-      }
-    )
-    .then(
-      () => {
-        toast.success("Message sent successfully");
-        form.current?.reset();
-      },
-      () => {
-        toast.error("Failed to send message");
-      }
-    )
-    .finally(() => {
-      setLoading(false);
-    });
-};
 
   return (
-    <section id="contact" className="w-full">
-      <div className="w-[90%] gap-10 flex flex-col sm:flex-row max-w-4xl mx-auto pt-13 pb-5 px-2">
-        <div className="w-full max-w-lg rounded-2xl dark:bg-slate-800 bg-[#f9f4f0] border border-white/20 shadow-xl p-6">
-          <h2 className="text-3xl font-bold text-purple-600 mb-2">
-            Contact Me
-          </h2>
-          <p className="text-gray-600 text-sm mb-6 dark:text-gray-300">
-            Feel free to reach out — I’ll get back to you soon.
-          </p>
-
-          <form ref={form} onSubmit={sendEmail} className="space-y-4">
-            <input
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              required
-              className="w-full p-3 rounded-lg bg-white dark:bg-slate-700 dark:text-white outline-none border border-gray-300 focus:border-purple-400 transition"
-            />
-
-            <input
-              type="email"
-              name="from_email"
-              placeholder="Your Email"
-              required
-              className="w-full p-3 rounded-lg bg-white dark:bg-slate-700 dark:text-white outline-none border border-gray-300 focus:border-purple-400 transition"
-            />
-
-            <textarea
-              name="message"
-              rows={4}
-              placeholder="Your Message"
-              required
-              className="w-full p-3 rounded-lg bg-white dark:bg-slate-700 dark:text-white outline-none border border-gray-300 resize-none focus:border-purple-400 transition"
-            />
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 cursor-pointer rounded-lg bg-linear-to-r curosor-pointer from-purple-500 to-indigo-500 text-white font-medium hover:opacity-90 transition disabled:opacity-50"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-        </div>
-        <div className="w-full rounded-2xl flex flex-col gap-3 dark:bg-slate-800 bg-[#f9f4f0] border border-white/20 shadow-xl p-6">
+    <section id="contact" className="w-full pt-5 pb-5">
+      <div className=" w-[90%] max-w-4xl mx-auto px-2 mb-3   ">
+        <h4 className="text-2xl  sm:text-2xl text-gray-800  dark:text-gray-200  tracking-[-0.02em] font-semibold opacity-90">
+          Let's Connect
+        </h4>
+        <p className="  sm:text-lg text-gray-800  dark:text-gray-200   tracking-[-0.02em] font-semibold opacity-80">
+          Feel free to reach out me
+        </p>
+      </div>
+      <div className="w-[90%] gap-10  max-w-4xl mx-auto pb-5 px-2 dark:border border-muted  rounded-xl">
+        <div className="grid grid-cols-1 shadow-xl p-4 rounded-2xl   dark:text-white md:grid-cols-3 gap-2 md:gap-4 max-w-4xl mx-auto">
           {contactItems.map((contact, index) => {
+            const isLarge = contact.size === "large";
+
             return (
               <a
                 key={contact.label}
@@ -135,36 +73,47 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
-          group relative overflow-hidden rounded-2xl border bg-linear-to-br ${contact.gradient}
-          hover:shadow-lg transition-all duration-500 ease-out
-       
-        `}
+                group relative overflow-hidden rounded-2xl border bg-linear-to-br ${contact.gradient}
+                hover:shadow-lg transition-all duration-500 ease-out
+                ${isLarge ? "md:col-span-2" : ""}
+                ${index === 1 ? "md:col-start-3" : ""}
+                ${contact.size === "small" ? "md:col-span-1" : ""}
+              `}
               >
-                <div className="relative p-4 md:p-6 h-full min-h-20 flex flex-col justify-between">
+                <div className="relative p-4 md:p-6 h-full min-h-40 flex flex-col justify-between">
+                  {/* Background Icon */}
                   <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
                     <HugeiconsIcon
                       icon={contact.icon}
-                      className="group-hover:scale-110 group-hover:-translate-x-2 group-hover:-translate-y-1 transition-all duration-700"
+                      size={isLarge ? 80 : 60}
+                      className="transform group-hover:scale-110 group-hover:-translate-x-2 group-hover:-translate-y-1 transition-all duration-700 ease-out"
                     />
                   </div>
 
+                  {/* Content */}
                   <div className="relative z-10">
-                    <h3 className="text-lg font-semibold mb-1">
+                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
                       {contact.label}
                     </h3>
-                    <p className="text-sm opacity-80">{contact.value}</p>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {contact.value}
+                    </p>
                   </div>
 
                   <div className="relative z-10 flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-wider opacity-60">
+                    <span className="text-xs text-muted-foreground/70 uppercase tracking-wider">
                       Contact
                     </span>
-                    <HugeiconsIcon
-                      icon={ArrowRight01Icon}
-                      size={16}
-                      className="opacity-60 group-hover:translate-x-1 transition-transform"
-                    />
+                    <div className="transform group-hover:translate-x-1 transition-transform duration-300">
+                      <HugeiconsIcon
+                        icon={ArrowRight01Icon}
+                        size={16}
+                        className="text-muted-foreground/50 group-hover:text-primary transition-colors duration-300"
+                      />
+                    </div>
                   </div>
+
+                  <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                 </div>
               </a>
             );

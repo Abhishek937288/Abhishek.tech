@@ -21,8 +21,8 @@ const Navbar = () => {
 
   if (!mounted) return null;
   return (
-    <div className="w-full flex  bg-[#f9f4f0] dark:bg-neutral-900 top-0 sticky z-5 h-12  ">
-      <div className="w-[90%]  max-w-4xl mx-auto flex  justify-between   sm:gap-10  max-sm:px-3  border-b border-slate-400 dark:border-gray-500">
+    <div className="w-full flex  bg-[#f9f4f0] dark:bg-neutral-900 top-0 sticky z-5 h-14  ">
+      <div className="w-[90%]  max-w-4xl mx-auto flex  justify-between   sm:gap-10  max-sm:px-3  border-b border-slate-400 dark:border-gray-300">
         <div className="flex items-center gap-10 justify-center sm:px-10">
           <div className="flex gap-2 items-center">
             <Code2
