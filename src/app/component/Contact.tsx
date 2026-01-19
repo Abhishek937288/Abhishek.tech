@@ -90,8 +90,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* Content */}
-                  <div className="relative z-10">
+                  <div className="relative z-3">
                     <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
                       {contact.label}
                     </h3>

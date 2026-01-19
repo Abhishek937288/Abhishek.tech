@@ -122,7 +122,7 @@ const projects = [
       },
       {
         name: "Tailwind CSS",
-        icon: TechIcons.Mongoose,
+        icon: TechIcons.Tailwind,
         url: "https://tailwindcss.com",
         iconKey: "Tailwind",
       },
@@ -289,26 +289,18 @@ const Project = () => {
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {project.description}
-              </p>{" "}
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-6 place-items-center">
-                {project.technologies.map((tech: Technology) => (
+              </p>
+              <div className="flex gap-2  sm:pt-5 flex-wrap">
+                {project.technologies.map((tech) => (
                   <a
                     key={tech.name}
                     href={tech.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center gap-2 group w-full"
+                    className="w-5 h-5 shrink-0 hover:scale-110 transition-transform"
+                    title={tech.name}
                   >
-                    {(() => {
-                      const Icon = tech.icon;
-                      return (
-                        <Icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
-                      );
-                    })()}
-
-                    <p className="text-xs font-semibold opacity-0  group-hover:opacity-100 text-center">
-                      {tech.name}
-                    </p>
+                    <tech.icon className="w-full h-full" />
                   </a>
                 ))}
               </div>

@@ -61,9 +61,10 @@ text-slate-900 dark:text-white"
           <p className="text-center font-space  opacity-80  tracking-[-0.02em]">
             I’m a self-taught MERN stack developer based in India with over a
             year of hands-on experience building real-world web applications. I
-            enjoy creating clean UIs and scalable backend logic, and I’m
-            currently looking for frontend or MERN stack developer
-            opportunities.
+            enjoy creating clean UIs and scalable backend logic. I have
+            completed the **Delta Full Stack Web Development certification from
+            Apna College** and am actively seeking frontend or MERN stack
+            developer roles.
           </p>
         </div>
         <div className="pt-5">
