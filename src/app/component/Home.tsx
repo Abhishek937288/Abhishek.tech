@@ -48,7 +48,7 @@ text-slate-900 dark:text-white"
           </div>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=1djQA3dS2y6bv_JH22AlMNDvHIUTXRrVv"
+            href="https://drive.google.com/file/d/1-sB-IhRaNRzin0OKWCucWoDbn-rUnSvK/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >

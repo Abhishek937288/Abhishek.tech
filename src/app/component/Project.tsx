@@ -2,6 +2,7 @@ import { ProjectType, Technology } from "@/types/react-github-calendar";
 import { ArrowUpRight, Github } from "lucide-react";
 import { TechIcons } from "./icons/TechIcons";
 
+
 const projects = [
   {
     id: 1,
