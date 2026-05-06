@@ -6,7 +6,7 @@ import Skills from "./component/Skills";
 
 export default function Page() {
   return (
-    <div className="bg-[#F3ECDD] dark:bg-neutral-900">
+    <div className="min-h-screen overflow-hidden bg-[#f7f3ea] text-slate-950 dark:bg-[#070816] dark:text-white">
       <Home />
       <Skills />
       <Project />

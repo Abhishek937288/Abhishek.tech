@@ -1,8 +1,5 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { toast } from "sonner";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Github01Icon,
@@ -49,20 +46,22 @@ const contactItems = [
 ];
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement | null>(null);
-
   return (
-    <section id="contact" className="w-full pt-5 pb-5">
-      <div className=" w-[90%] max-w-4xl mx-auto px-2 mb-3   ">
-        <h4 className="text-2xl  sm:text-2xl text-gray-800  dark:text-gray-200  tracking-[-0.02em] font-semibold opacity-90">
-          Let's Connect
-        </h4>
-        <p className="  sm:text-lg text-gray-800  dark:text-gray-200   tracking-[-0.02em] font-semibold opacity-80">
-          Feel free to reach out me
+    <section id="contact" className="w-full py-16">
+      <div className="mx-auto mb-8 w-[92%] max-w-6xl">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal-600 dark:text-teal-300">
+          Contact
+        </p>
+        <h2 className="font-space text-4xl font-bold tracking-tight sm:text-5xl">
+          Let&apos;s build something
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+          Open to frontend and MERN stack roles, collaborations, and product
+          ideas that need careful execution.
         </p>
       </div>
-      <div className="w-[90%] gap-10  max-w-4xl mx-auto pb-5 px-2 dark:border border-muted  rounded-xl">
-        <div className="grid grid-cols-1 shadow-xl p-4 rounded-2xl   dark:text-white md:grid-cols-3 gap-2 md:gap-4 max-w-4xl mx-auto">
+      <div className="mx-auto w-[92%] max-w-6xl">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {contactItems.map((contact, index) => {
             const isLarge = contact.size === "large";
 
@@ -73,15 +72,15 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
-                group relative overflow-hidden rounded-2xl border bg-linear-to-br ${contact.gradient}
-                hover:shadow-lg transition-all duration-500 ease-out
+                group relative animate-reveal-up overflow-hidden rounded-[1.5rem] border border-slate-900/10 bg-linear-to-br ${contact.gradient}
+                bg-white/65 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/10 dark:border-white/10 dark:bg-white/[0.04]
                 ${isLarge ? "md:col-span-2" : ""}
                 ${index === 1 ? "md:col-start-3" : ""}
                 ${contact.size === "small" ? "md:col-span-1" : ""}
               `}
+                style={{ animationDelay: `${index * 120}ms` }}
               >
-                <div className="relative p-4 md:p-6 h-full min-h-40 flex flex-col justify-between">
-                  {/* Background Icon */}
+                <div className="relative flex h-full min-h-44 flex-col justify-between p-5 md:p-6">
                   <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
                     <HugeiconsIcon
                       icon={contact.icon}
@@ -90,24 +89,24 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div className="relative z-3">
-                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
+                  <div className="relative z-10">
+                    <h3 className="mb-1 text-xl font-bold transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-200">
                       {contact.label}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="mb-4 text-sm text-slate-600 dark:text-slate-300">
                       {contact.value}
                     </p>
                   </div>
 
                   <div className="relative z-10 flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground/70 uppercase tracking-wider">
+                    <span className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
                       Contact
                     </span>
                     <div className="transform group-hover:translate-x-1 transition-transform duration-300">
                       <HugeiconsIcon
                         icon={ArrowRight01Icon}
                         size={16}
-                        className="text-muted-foreground/50 group-hover:text-primary transition-colors duration-300"
+                        className="text-slate-500 transition-colors duration-300 group-hover:text-teal-600 dark:group-hover:text-teal-200"
                       />
                     </div>
                   </div>

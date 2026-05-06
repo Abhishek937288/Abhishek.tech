@@ -1,4 +1,3 @@
-import { ProjectType, Technology } from "@/types/react-github-calendar";
 import { ArrowUpRight, Github } from "lucide-react";
 import { TechIcons } from "./icons/TechIcons";
 
@@ -240,74 +239,96 @@ const projects = [
 
 const Project = () => {
   return (
-    <section id="project" className="w-full pt-15">
-      <div className="w-[90%] flex flex-col gap-10 max-w-4xl mx-auto sm:px-3">
-        {projects.map((project: ProjectType) => (
+    <section id="project" className="relative w-full py-16">
+      <div className="pointer-events-none absolute left-0 top-24 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl dark:bg-sky-500/10" />
+      <div className="mx-auto w-[92%] max-w-6xl">
+        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-rose-600 dark:text-rose-300">
+              Projects
+            </p>
+            <h2 className="font-space text-4xl font-bold tracking-tight sm:text-5xl">
+              Selected work
+            </h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+            Full-stack builds focused on useful workflows, auth, data, realtime
+            features, and responsive product interfaces.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-8">
+        {projects.map((project, index) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row gap-6 items-start dark:border border-muted rounded-2xl p-3 sm:p-6  shadow-xl   dark:text-white"
+            className="group animate-reveal-up overflow-hidden rounded-[1.75rem] border border-slate-900/10 bg-white/65 p-3 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/10 md:grid md:grid-cols-[0.92fr_1.08fr] md:gap-6 md:p-5 dark:border-white/10 dark:bg-white/[0.04]"
+            style={{ animationDelay: `${index * 130}ms` }}
           >
-            <div className="w-full md:w-[45%] rounded-lg overflow-hidden relative group">
+            <div className="relative h-72 w-full overflow-hidden rounded-[1.25rem] bg-slate-950 md:h-full">
               <img
                 src={project.image}
-                alt=""
-                className="h-60 w-full object-center"
+                alt={`${project.title} preview`}
+                className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/75 via-slate-950/10 to-transparent opacity-70" />
 
               <div
-                className="absolute bottom-2 right-1 flex gap-1 
-                  opacity-100 md:opacity-0 group-hover:md:opacity-100 
-                  transition-opacity duration-300"
+                className="absolute bottom-4 right-4 flex gap-2 opacity-100 transition duration-300 md:opacity-0 md:group-hover:opacity-100"
               >
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/90 p-2 rounded-full hover:bg-white transition"
+                  aria-label={`${project.title} GitHub repository`}
+                  className="grid h-11 w-11 place-items-center rounded-full bg-white/95 text-slate-950 shadow-lg transition hover:-translate-y-1 hover:bg-teal-200"
                 >
-                  <Github className="sm:h-7 sm:w-7  rounded-full  text-gray-800" />
+                  <Github className="h-5 w-5" />
                 </a>
 
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/90 p-2 rounded-full hover:bg-white transition"
+                  aria-label={`${project.title} live demo`}
+                  className="grid h-11 w-11 place-items-center rounded-full bg-white/95 text-slate-950 shadow-lg transition hover:-translate-y-1 hover:bg-teal-200"
                 >
-                  <ArrowUpRight className="h-7 w-7  rounded-full  text-gray-800" />
+                  <ArrowUpRight className="h-5 w-5" />
                 </a>
               </div>
             </div>
 
-            <div className="flex-1 flex flex-col gap-4">
+            <div className="flex flex-col justify-between gap-7 p-3 md:p-2">
+              <div>
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold capitalize">
+                <h3 className="font-space text-3xl font-bold capitalize">
                   {project.title}
                 </h3>
-                <span className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground">
+                <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold text-white dark:bg-white dark:text-slate-950">
                   Web App
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 {project.description}
               </p>
-              <div className="flex gap-2  sm:pt-5 flex-wrap">
+              </div>
+              <div className="flex flex-wrap gap-3">
                 {project.technologies.map((tech) => (
                   <a
                     key={tech.name}
                     href={tech.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-5 h-5 shrink-0 hover:scale-110 transition-transform"
+                    className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-slate-900/10 bg-white/70 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-teal-400 dark:border-white/10 dark:bg-white/5"
                     title={tech.name}
                   >
-                    <tech.icon className="w-full h-full" />
+                    <tech.icon className="h-5 w-5" />
                   </a>
                 ))}
               </div>
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

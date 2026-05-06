@@ -8,8 +8,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import { Code2, Menu, Moon, MoreHorizontalIcon, Sun } from "lucide-react";
+import { Code2, Menu, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+
+const links = [
+  { href: "#skills", label: "Skills" },
+  { href: "#project", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 const Navbar = () => {
   const { setTheme, theme } = useTheme();
@@ -21,89 +27,67 @@ const Navbar = () => {
 
   if (!mounted) return null;
   return (
-    <div className="w-full flex  bg-[#f9f4f0] dark:bg-neutral-900 top-0 sticky z-5 h-14  ">
-      <div className="w-[90%]  max-w-4xl mx-auto flex  justify-between   sm:gap-10  max-sm:px-3  border-b border-slate-400 dark:border-gray-100">
-        <div className="flex items-center gap-10 justify-center sm:px-10">
-          <div className="flex gap-2 items-center">
+    <div className="sticky top-0 z-50 w-full border-b border-slate-900/10 bg-[#f7f3ea]/80 backdrop-blur-xl dark:border-white/10 dark:bg-[#070816]/80">
+      <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between gap-4">
+        <a href="#home" className="flex items-center gap-3">
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-slate-900/15 dark:bg-white dark:text-slate-950">
             <Code2
-              className="
-    h-7 w-7
-    text-green-700 dark:text-red-800
-    cursor-pointer
-    transition-transform duration-500 ease-in-out
- hover:rotate-360
-  "
+              className="h-5 w-5 transition-transform duration-500 hover:rotate-180"
             />
-            <a
-              href="#home"
-              className="font-space sm:text-lg font-bold tracking-[-0.02em]"
-            >
-              Abhishek
-            </a>
-          </div>
-        </div>
+          </span>
+          <span className="font-space text-lg font-bold tracking-tight">
+            Abhishek
+          </span>
+        </a>
 
-        <div className="flex items-center gap-2  px-2">
-          <div className=" max-sm:hidden flex items-center justify-start gap-5 px-2">
-            <a
-              href="#skills"
-              className="hover:underline font-semibold opacity-90"
-            >
-              skills
-            </a>
-            <a
-              href="#project"
-              className="hover:underline font-semibold opacity-90"
-            >
-              Project
-            </a>
-            <a
-              href="#contact"
-              className="hover:underline font-semibold opacity-90"
-            >
-              Contact
-            </a>
+        <div className="flex items-center gap-2">
+          <div className="hidden items-center rounded-full border border-slate-900/10 bg-white/60 p-1 shadow-sm backdrop-blur sm:flex dark:border-white/10 dark:bg-white/5">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-950 hover:text-white dark:text-slate-300 dark:hover:bg-white dark:hover:text-slate-950"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
-          <div
+          <button
+            aria-label="Toggle theme"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="
-    cursor-pointer rounded-lg flex justify-center items-center h-[80%]
-    px-2 py-1 sm:py-2
-    bg-neutral-200 hover:bg-neutral-300
-    dark:bg-neutral-800 dark:hover:bg-neutral-700
-    transition-colors duration-300
-  "
+            className="grid h-10 w-10 place-items-center rounded-full border border-slate-900/10 bg-white/70 text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:text-teal-600 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:text-teal-200"
           >
             {theme === "dark" ? (
               <Sun className="h-5 w-5 text-yellow-400" />
             ) : (
-              <Moon fill="white" color="black" />
+              <Moon className="h-5 w-5" />
             )}
-          </div>
+          </button>
 
-          <div className="sm:hidden flex items-center ">
+          <div className="flex items-center sm:hidden">
             <>
               <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
-                  <button aria-label="Open menu" className="cursor-pointer">
-                    <Menu />
+                  <button
+                    aria-label="Open menu"
+                    className="grid h-10 w-10 place-items-center rounded-full border border-slate-900/10 bg-white/70 shadow-sm dark:border-white/10 dark:bg-white/5"
+                  >
+                    <Menu className="h-5 w-5" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
-                  className="w-40 px-5  bg-[#f9f4f0] py-3 mt-2 dark:bg-slate-600 dark:text-white border shadow-2xl rounded-lg "
+                  className="mt-2 w-44 rounded-2xl border border-slate-900/10 bg-white/95 p-2 shadow-2xl outline-none backdrop-blur dark:border-white/10 dark:bg-slate-950/95 dark:text-white"
                   align="end"
                 >
-                  <DropdownMenuGroup className="">
-                    <DropdownMenuItem className=" hover:bg-slate-100 outline-none dark:hover:bg-slate-700 px-2 font-semibold opacity-90 cursor-pointer">
-                      {" "}
-                      <a href="#skills">skills</a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="outline-none hover:bg-slate-100 dark:hover:bg-slate-700 px-2  font-semibold opacity-90 cursor-pointer">
-                      <a href="#project">Projects</a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="outline-none hover:bg-slate-100 dark:hover:bg-slate-700 px-2 font-semibold opacity-90 cursor-pointer">
-                      <a href="#contact">Contact</a>
-                    </DropdownMenuItem>
+                  <DropdownMenuGroup>
+                    {links.map((link) => (
+                      <DropdownMenuItem
+                        key={link.href}
+                        className="rounded-xl px-3 py-2 font-semibold outline-none transition hover:bg-slate-100 dark:hover:bg-white/10"
+                      >
+                        <a href={link.href}>{link.label}</a>
+                      </DropdownMenuItem>
+                    ))}
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
               </DropdownMenu>
