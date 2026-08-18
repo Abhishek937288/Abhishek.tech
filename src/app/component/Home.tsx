@@ -39,7 +39,7 @@ const Home = () => {
         <div className="pointer-events-none absolute -left-28 top-24 h-72 w-72 rounded-full bg-teal-300/25 blur-3xl dark:bg-teal-400/10" />
         <div className="pointer-events-none absolute -right-28 top-20 h-80 w-80 rounded-full bg-rose-300/20 blur-3xl dark:bg-fuchsia-500/10" />
 
-        <div className="relative z-10 animate-reveal-left">
+        <div className="relative z-10 order-2 md:order-1 animate-reveal-left">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-700 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-slate-200">
             <Sparkles className="h-4 w-4 text-teal-500" />
             Available for MERN and Next.js roles
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative z-10 animate-reveal-right">
+        <div className="relative z-10 order-1 md:order-2 animate-reveal-right">
           <div className="relative mx-auto max-w-md">
             <div className="absolute -left-4 top-10 h-24 w-24 rounded-full border border-teal-400/30 bg-teal-400/10 animate-float-slow" />
             <div className="absolute -right-3 bottom-28 h-20 w-20 rounded-3xl border border-rose-400/30 bg-rose-400/10 animate-float-medium" />
@@ -105,7 +105,7 @@ const Home = () => {
               <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white to-transparent animate-shimmer" />
               <div className="overflow-hidden rounded-[1.5rem] bg-slate-950">
                 <img
-                  src="/images/me.jpg"
+                  src="/images/me.jpeg"
                   alt="Abhishek Mankumbare"
                   className="h-[420px] w-full object-cover object-center transition duration-700 hover:scale-105"
                 />
