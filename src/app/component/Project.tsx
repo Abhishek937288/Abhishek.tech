@@ -11,7 +11,7 @@ const projects = [
     image: "/project/zerodhaProject.png",
     github:
       "https://github.com/Abhishek937288/Zerodha-Trading-Platform-Clone-project",
-    live: "https://zerodha-trading-platform-clone-project-4.onrender.com/",
+    live: "https://zerodha-trading-platform-clone.vercel.app/",
     technologies: [
       {
         name: "React",
@@ -88,7 +88,7 @@ const projects = [
       "Stremify – A social learning platform built with the MERN stack that enables users to connect with friends, chat, and make video calls. It allows people to learn new languages together in an interactive and engaging way, share experiences, and collaborate, making language learning fun, social, and effective.",
     image: "/project/stremify.png",
     github: "https://github.com/Abhishek937288/Streamifyweb",
-    live: "https://streamifyweb-2.onrender.com",
+    live: "https://streamifyweb-umber.vercel.app",
     technologies: [
       {
         name: "React",
@@ -154,12 +154,71 @@ const projects = [
   },
   {
     id: 3,
-    title: "Prolink",
+    title: "RAG Chatbot",
     description:
-      "LinkedIn Clone – A professional networking platform built with the MERN stack, allowing users to create profiles, connect with others, post updates, and engage with a social feed, replicating core LinkedIn features.",
-    image: "/project/linkedIn.png",
-    github: "https://github.com/Abhishek937288/Linkedin-clone",
-    live: "https://linkedin-clone-3-acj1.onrender.com",
+      "RAG Chatbot – An AI-powered retrieval-augmented generation platform built with Next.js and React that enables users to upload PDF documents, perform semantic search using Hugging Face embeddings, and receive intelligent answers via OpenAI-compatible LLM. Featuring secure authentication with Clerk, persistent data storage in Neon PostgreSQL using Drizzle ORM, and a modern UI built with shadcn/ui components for a seamless, full-stack chat experience.",
+    image: "/images/ragchatbot.png",
+    github: "https://github.com/Abhishek937288/RAG-chatbot",
+    live: "https://rag-chatbot-psi-sable.vercel.app",
+    technologies: [
+      {
+        name: "Next.js",
+        icon: TechIcons.NextJs,
+        url: "https://nextjs.org",
+        iconKey: "NextJs",
+      },
+      {
+        name: "React",
+        icon: TechIcons.React,
+        url: "https://react.dev",
+        iconKey: "React",
+      },
+      {
+        name: "TypeScript",
+        icon: TechIcons.TypeScript,
+        url: "https://www.typescriptlang.org",
+        iconKey: "TypeScript",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: TechIcons.Tailwind,
+        url: "https://tailwindcss.com",
+        iconKey: "Tailwind",
+      },
+      {
+        name: "PostgreSQL",
+        icon: TechIcons.PostgreSQL,
+        url: "https://www.postgresql.org",
+        iconKey: "PostgreSQL",
+      },
+      {
+        name: "shadcn/ui",
+        icon: TechIcons.Shadcn,
+        url: "https://ui.shadcn.com",
+        iconKey: "Shadcn",
+      },
+      {
+        name: "Git",
+        icon: TechIcons.Git,
+        url: "https://git-scm.com",
+        iconKey: "Git",
+      },
+      {
+        name: "GitHub",
+        icon: TechIcons.Github,
+        url: "https://github.com",
+        iconKey: "GitHub",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Tomato",
+    description:
+      "Tomato – A full-stack food delivery application built with React, Vite, and TypeScript on the frontend and Express, Prisma, and PostgreSQL on the backend. It features secure user authentication with email verification, intuitive menu browsing by category, seamless cart management, order placement and real-time tracking, and Stripe payment integration. Admins can efficiently manage the menu by adding, updating, and deleting dishes, while users can view their complete order history and manage ongoing orders.",
+    image: "/images/Tomato.png",
+    github: "https://github.com/Abhishek937288/Food-del",
+    live: "https://food-del-three-liard.vercel.app",
     technologies: [
       {
         name: "React",
@@ -172,6 +231,12 @@ const projects = [
         icon: TechIcons.TypeScript,
         url: "https://www.typescriptlang.org",
         iconKey: "TypeScript",
+      },
+      {
+        name: "Vite",
+        icon: TechIcons.Vercel,
+        url: "https://vitejs.dev",
+        iconKey: "Vercel",
       },
       {
         name: "Node.js",
@@ -210,16 +275,10 @@ const projects = [
         iconKey: "BetterAuth",
       },
       {
-        name: "WebSockets",
-        icon: TechIcons.SokcetIO,
-        url: "https://socket.io",
-        iconKey: "WebSockets",
-      },
-      {
-        name: "Postman",
-        icon: TechIcons.PostMan,
-        url: "https://www.postman.com",
-        iconKey: "Postman",
+        name: "TanStack Query",
+        icon: TechIcons.ReactQuery,
+        url: "https://tanstack.com/query",
+        iconKey: "TanStackQuery",
       },
       {
         name: "Git",
