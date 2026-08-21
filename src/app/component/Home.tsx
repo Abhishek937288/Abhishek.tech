@@ -15,7 +15,7 @@ import {
 
 const highlights = [
   { value: "1+ yr", label: "building production-ready apps" },
-  { value: "3", label: "full-stack projects shipped" },
+  { value: "4", label: "full-stack projects shipped" },
   { value: "MERN", label: "React, Node, Express, MongoDB" },
 ];
 

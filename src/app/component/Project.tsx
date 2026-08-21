@@ -323,7 +323,7 @@ const Project = () => {
             className="group animate-reveal-up overflow-hidden rounded-[1.75rem] border border-slate-900/10 bg-white/65 p-3 shadow-xl shadow-slate-900/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/10 md:grid md:grid-cols-[0.92fr_1.08fr] md:gap-6 md:p-5 dark:border-white/10 dark:bg-white/[0.04]"
             style={{ animationDelay: `${index * 130}ms` }}
           >
-            <div className="relative h-72 w-full overflow-hidden rounded-[1.25rem] bg-slate-950 md:h-full">
+            <div className="relative h-72 w-full overflow-hidden rounded-[1.25rem] bg-slate-950 md:h-full md:max-h-64 md:self-center">
               <img
                 src={project.image}
                 alt={`${project.title} preview`}
