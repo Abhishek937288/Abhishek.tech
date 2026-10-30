@@ -1,12 +1,20 @@
 import { TechIcons } from "./icons/TechIcons";
 
-const skillGroups = [
+type SkillItem = { name: string; icon?: (typeof TechIcons)[keyof typeof TechIcons] };
+
+const skillGroups: {
+  title: string;
+  description: string;
+  gradient: string;
+  items: SkillItem[];
+}[] = [
   {
     title: "Frontend",
     description: "Interfaces that feel fast, clear, and polished.",
     gradient: "from-teal-500/12 to-sky-500/10",
     items: [
       { name: "Javascript", icon: TechIcons.Javscript },
+      { name: "Python" },
       { name: "TypeScript", icon: TechIcons.TypeScript },
       { name: "React Query", icon: TechIcons.ReactQuery },
       { name: "ShadCn", icon: TechIcons.Shadcn },
@@ -30,6 +38,8 @@ const skillGroups = [
       { name: "pnpm", icon: TechIcons.Pnpm },
       { name: "Zod", icon: TechIcons.Zod },
       { name: "Socket.IO", icon: TechIcons.SokcetIO },
+      { name: "FastAPI" },
+      { name: "WebSockets", icon: TechIcons.SokcetIO },
     ],
   },
   {
@@ -41,6 +51,22 @@ const skillGroups = [
       { name: "PostgreSQL", icon: TechIcons.PostgreSQL },
       { name: "Mongoose", icon: TechIcons.Mongoose },
       { name: "Prisma", icon: TechIcons.Prisma },
+      { name: "Drizzle ORM" },
+      { name: "MySQL" },
+      { name: "Redis (Streams)" },
+      { name: "Qdrant" },
+    ],
+  },
+  {
+    title: "AI / Voice",
+    description: "LLM-powered chat and voice assistants with retrieval.",
+    gradient: "from-sky-500/12 to-indigo-500/10",
+    items: [
+      { name: "LangGraph" },
+      { name: "RAG" },
+      { name: "Embeddings" },
+      { name: "LLM APIs" },
+      { name: "ElevenLabs" },
     ],
   },
   {
@@ -52,6 +78,7 @@ const skillGroups = [
       { name: "Postman", icon: TechIcons.PostMan },
       { name: "VS Code", icon: TechIcons.VsCode },
       { name: "Vercel", icon: TechIcons.Vercel },
+      { name: "Render", icon: TechIcons.Render },
     ],
   },
 ];
@@ -100,7 +127,13 @@ const Skills = () => {
                     key={item.name}
                     className="flex items-center gap-3 rounded-2xl border border-slate-900/10 bg-white/65 p-3 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-teal-400/70 hover:bg-white dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.08]"
                   >
-                    <item.icon className="h-6 w-6 shrink-0" />
+                    {item.icon ? (
+                      <item.icon className="h-6 w-6 shrink-0" />
+                    ) : (
+                      <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-slate-900/10 text-xs font-bold dark:bg-white/10">
+                        {item.name[0]}
+                      </span>
+                    )}
                     <p className="text-sm font-bold text-slate-700 dark:text-slate-200">
                       {item.name}
                     </p>

@@ -11,7 +11,7 @@ const projects = [
     image: "/project/zerodhaProject.png",
     github:
       "https://github.com/Abhishek937288/Zerodha-Trading-Platform-Clone-project",
-    live: "https://zerodha-trading-platform-clone.vercel.app/",
+    live: "https://zerodha.sas3d.in",
     technologies: [
       {
         name: "React",
@@ -88,7 +88,7 @@ const projects = [
       "Stremify – A social learning platform built with the MERN stack that enables users to connect with friends, chat, and make video calls. It allows people to learn new languages together in an interactive and engaging way, share experiences, and collaborate, making language learning fun, social, and effective.",
     image: "/project/stremify.png",
     github: "https://github.com/Abhishek937288/Streamifyweb",
-    live: "https://streamifyweb-umber.vercel.app",
+    live: "https://stremify.sas3d.in",
     technologies: [
       {
         name: "React",
@@ -159,7 +159,7 @@ const projects = [
       "RAG Chatbot – An AI-powered retrieval-augmented generation platform built with Next.js and React that enables users to upload PDF documents, perform semantic search using Hugging Face embeddings, and receive intelligent answers via OpenAI-compatible LLM. Featuring secure authentication with Clerk, persistent data storage in Neon PostgreSQL using Drizzle ORM, and a modern UI built with shadcn/ui components for a seamless, full-stack chat experience.",
     image: "/images/ragchatbot.png",
     github: "https://github.com/Abhishek937288/RAG-chatbot",
-    live: "https://rag-chatbot-psi-sable.vercel.app",
+    live: "https://ragchatbot.sas3d.in",
     technologies: [
       {
         name: "Next.js",
@@ -218,7 +218,7 @@ const projects = [
       "Tomato – A full-stack food delivery application built with React, Vite, and TypeScript on the frontend and Express, Prisma, and PostgreSQL on the backend. It features secure user authentication with email verification, intuitive menu browsing by category, seamless cart management, order placement and real-time tracking, and Stripe payment integration. Admins can efficiently manage the menu by adding, updating, and deleting dishes, while users can view their complete order history and manage ongoing orders.",
     image: "/images/Tomato.png",
     github: "https://github.com/Abhishek937288/Food-del",
-    live: "https://food-del-three-liard.vercel.app",
+    live: "https://tomato.sas3d.in",
     technologies: [
       {
         name: "React",

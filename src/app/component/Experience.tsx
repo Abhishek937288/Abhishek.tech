@@ -7,10 +7,12 @@ import {
 } from "lucide-react";
 
 const responsibilities = [
-  "Developed RESTful APIs using Node.js and Express for handling authentication and core application data.",
-  "Integrated frontend with backend systems, ensuring efficient API communication and state management.",
-  "Built authentication workflows and real-time features using modern web technologies.",
-  "Designed and implemented a Reddit-style forum system with posts, comments, and user interactions.",
+  "Developed and maintained 30–50 REST API endpoints using Node.js and Express.js for authentication, application data, and business logic within a 10-member engineering team.",
+  "Developed and shipped 35–40 fullstack features, integrating REST APIs and client-side state management for responsive application workflows.",
+  "Implemented JWT authentication and authorization and Socket.IO/WebSocket functionality supporting 500–600+ active users across real-time application features.",
+  "Built and launched a Reddit-style forum module in 7 days with posts, threaded comments, notifications, and user interactions; onboarded 500–600 users and 25+ posts at launch.",
+  "Integrated an LLM-powered AI chatbot into the PWA and CRM, handling 300+ conversations per week with 70% resolved without human intervention, real-time typing and status indicators, and seamless hand-off to human agents.",
+  "Built AI voice bot features on ElevenLabs Conversational AI supporting 100+ in-app calls per day, with server-issued token security, per-plan daily call limits, outbound check-in calls with transcripts and recordings in the CRM, and a callback queue with role-based access, agent assignment and 10 min SLA tracking.",
 ];
 
 const Experience = () => {
