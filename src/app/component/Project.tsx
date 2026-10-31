@@ -5,13 +5,13 @@ import { TechIcons } from "./icons/TechIcons";
 const projects = [
   {
     id: 1,
-    title: "zerodha clone",
+    title: "Tradeora",
     description:
-      "A simplified trading dashboard designed to reflect real investing workflows. It enables users to manage holdings, place buy and sell orders, and track portfolio activity over time through a clear, focused, and intuitive interface built for clarity and ease of use.",
-    image: "/project/zerodhaProject.png",
+      "A clean, distraction-free trading platform for stocks, F&O, mutual funds and ETFs. It lets users track a live market watchlist, place buy and sell orders, and follow holdings and positions in real time through a fast, focused dashboard.",
+    image: "/project/tradeoraProject.png",
     github:
       "https://github.com/Abhishek937288/Zerodha-Trading-Platform-Clone-project",
-    live: "https://zerodha.sas3d.in",
+    live: "https://tradeora.sas3d.in",
     technologies: [
       {
         name: "React",
